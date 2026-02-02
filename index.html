@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Just for You 💗</title>
+<style>
+body {
+  margin:0;
+  height:100vh;
+  background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: Arial, sans-serif;
+  overflow:hidden;
+}
+.card {
+  background:white;
+  padding:30px;
+  border-radius:18px;
+  text-align:center;
+  max-width:420px;
+  box-shadow:0 15px 35px rgba(0,0,0,0.2);
+}
+h1 { color:#ff4d6d; }
+p { color:#333; font-size:16px; }
+.heart {
+  position:fixed;
+  font-size:18px;
+  animation:fall 5s linear infinite;
+}
+@keyframes fall {
+  0% { top:-10%; opacity:1; }
+  100% { top:110%; opacity:0; }
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h1>Hey You 💗</h1>
+  <p>
+    I don’t know how you do it,  
+    but you somehow make everything lighter  
+    just by being you.
+  </p>
+  <p>
+    This isn’t romantic.  
+    This is just me saying —
+  </p>
+  <p>
+    you’re special,  
+    you matter,  
+    and I’m really lucky to have you.
+  </p>
+  <p><strong>Your BFF 🫶</strong></p>
+</div>
+
+<script>
+setInterval(()=>{
+  let h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="💗";
+  h.style.left=Math.random()*100+"vw";
+  h.style.animationDuration=(3+Math.random()*2)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),5000);
+},300);
+</script>
+
+</body>
+</html>
